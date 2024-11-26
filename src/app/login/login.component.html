@@ -1,0 +1,31 @@
+<!-- SignUp Form -->
+<h2>Sign Up</h2>
+<form #signUpForm="ngForm" (ngSubmit)="onSignUp(signUpForm)">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required />
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" ngModel required />
+  </div>
+  <button type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
+</form>
+
+<!-- Login Form -->
+<h2>Login</h2>
+<form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+  <div>
+    <label for="loginEmail">Email:</label>
+    <input type="email" id="loginEmail" name="email" ngModel required />
+  </div>
+  <div>
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="password" ngModel required />
+  </div>
+  <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>
